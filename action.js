@@ -1,6 +1,6 @@
-const song = document.getElementsByClassName("song");
+const song = document.querySelector(".song");
 const video = document.querySelector(".vid-container video");
-const play = document.getElementsByClassName("play");
+const play = document.querySelector(".play");
 const sounds  = document.querySelectorAll(".sound-picker button");
 const timeDisplay = document.querySelector('.time-display');
 const timeSelect = document.querySelectorAll(".time-select button");
