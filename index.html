@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meditation App</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-<body>
-    
+  </head>
+  <body>
     <div class="app">
-        <div class="vid-container">
-            <video loop>
-                <source src="./video/rain.mp4" type="video/mp4"/>
-            </video>
+      <div class="vid-container">
+        <video loop>
+          <source src="./video/rain.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="sound-picker">
+        <button data-sound="./sound/rain.mp3" data-video="./video/rain.mp4">
+          Rain
+        </button>
+        <button data-sound="./sound/wood.mp3" data-video="./video/wood.mp4">
+          Wood
+        </button>
+        <button data-sound="./sound/river.mp3" data-video="./video/river.mp4">
+          River
+        </button>
+      </div>
+      <div class="timer-player">
+        <div class="time-select">
+          <button data-time="120">2 min</button>
+          <button data-time="300">5 min</button>
+          <button data-time="600">10 min</button>
         </div>
-        <div class="sound-picker">
-            <button data-sound="./sound/rain.mp3" data-video="./video/rain.mp4">Rain</button>
-            <button data-sound="./sound/wood.mp3" data-video="./video/wood.mp4">
-                Wood
-            </button>
-            <button data-sound="./sound/river.mp3" data-video="./video/river.mp4">
-               River
-            </button>
+        <div class="player-container">
+          <audio class="song">
+            <source src="./sound/rain.mp3" />
+          </audio>
+          <button>
+            <img class="play" src="./img/play.png" height="100%" />
+          </button>
+          <h3 class="time-display">0:00</h3>
         </div>
-        <div class="timer-player">
-            <div class="time-select">
-                <button data-time="120">2 min</button>
-                <button data-time="300">5 min</button>
-                <button data-time="600">10 min</button>
-            </div>
-            <div class="player-container">
-                <audio class="song">
-                    <source src="./sound/rain.mp3" />
-                  </audio>
-                <button><img class="play" src="./img/play.png" height="100%"></button>
-                  <h3 class="time-display">0:00</h3>   
-            </div>
-        </div>
-       
-        
+      </div>
     </div>
 
     <script src="action.js"></script>
-</body>
+  </body>
 </html>
